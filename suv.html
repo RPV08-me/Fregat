@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="second.css">
+    <title>Фрегат</title>
+</head>
+<body>
+    <header>
+        <img src="корабль.png" alt="Лого">
+         <div class="links">
+          <ul>
+               <li><a href="main.html#about">О нас</a></li>
+               <li><a href="main.html#catalog">Каталог</a></li>
+                <li><a href="main.html#feedback">Отзывы</a></li>
+                 <li><a href="main.html#contact">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Поиск" class="searchinp">
+            <button class="searchbtn">
+            <img src="Лупа.png" alt="Поиск"></button>
+        </div>
+    </header>
+    <section class="about">
+        <h2>Сувенирная продукция</h2>
+        <div class="aboutimg">
+            <img src="61.png" alt="Вымпел">
+            <img src="62.png" alt="Набор">
+            <img src="63.png" alt="Кепки">
+        </div>
+        <div class="aboutimg">
+            <img src="64.png" alt="Кубки">
+            <img src="65.png" alt="Пакеты">
+            <img src="66.png" alt="Футболка">
+        </div>
+        <p>Рекламно-сувенирная продукция — это вид изделий, используемых в качестве подарков, призов, раздаточных материалов в рекламных кампаниях, а также в виде корпоративных и бизнес-сувениров, чаще всего с нанесением логотипа или фирменного стиля заказчика на самом продукте или его упаковке. Часто в аналогичном контексте употребляются термины промоподарки, промосувениры, бизнес-подарки, корпоративный мерч…
+Традиционно считается, что первым рекламным сувениром был памятный значок, выпущенный в 1789 году, чтобы отметить избрание Джорджа Вашингтона первым президентом только что сформированных Соединенных Штатов Америки.
+В современном мире ассортимент сувенирной продукции бесконечен. Всё то, что можно взять в руки, и на чем есть поверхность, пригодная для нанесения изображения или текста, потенциально является сувениром.
+Магнит сувенирный, значок закатной, значок заливной (оптический, смола), значок штампованный (рельеф, индивидуальный дизайн), брелок в разном исполнении. Сувениры – материал стекло, керамика, дерево, металл. Кружка или тарелка с нанесённым изображением. Термос или термокружка с Вашим индивидуальным оформлением. Плакетка памятная или поздравительная. Ежедневник, планинг, записная книжка, ручка-всё будет оформлено по Вашему пожеланию и в любом сочетании. Часы настенные или настольные- несомненно отличный носитель логотипа. Сувенирные пазлы- не просто головоломка, но и оригинальный подарок.Для оформления подарков лазерная гравировка, сублимация или заливка оптической смолой- идеальные технологические решения для изготовления памятной шильды или таблички.
+Не только это, но и многое другое мы готовы предложить Вам.
+Рекламно-производственная компания «ФРЕГАТ» готова воплотить Ваши представления или свои видения о сувенире в жизнь.</p>
+    </section>
+    <section class="calculator">
+    <div class="calculator1">
+        <h2 class="calctitle">Калькулятор</h2>
+        <div class="calcform">
+            <select class="calcselect" id="calcType">
+                <option value="1000">Вид</option>
+                <option value="1000">Одежда (1000 руб)</option>
+                <option value="1500">Канцелярия (1500 руб)</option>
+                <option value="800">Значок (800 руб)</option>
+                <option value="2000">Кубок (2000 руб)</option>
+            </select>
+            
+            <select class="calcselect" id="calcComplexity">
+                <option value="1">Сложность дизайна</option>
+                <option value="1">Низкая</option>
+                <option value="1.5">Средняя</option>
+                <option value="2">Высокая</option>
+            </select>
+            
+            <div class="calccounter">
+                <button class="calcbtn" onclick="changeComplexity(-1)">−</button>
+                <span class="calcvalue" id="complexityValue">0</span>
+                <button class="calcbtn" onclick="changeComplexity(1)">+</button>
+            </div>
+            
+            <button class="calccalculate" onclick="calculateTotal()">Рассчитать</button>
+            
+            <div class="calctotal">
+                Итого: <span class="calcprice" id="totalPrice">0 руб</span>
+            </div>
+        </div>
+    </div>
+    <button class="calcorder" onclick="orderSubmit()">Оформить</button>
+    </section>
+    <footer>
+   <div class="footel">
+        <img src="51.png" alt="Телефон1">
+        <p>+73532305207</p>
+    </div>
+    <img src="корабль.png" alt="Лого">
+    <div class="footel">
+        <img src="51.png" alt="Телефон2">
+        <p>+73532305277</p>
+    </div> 
+</footer>
+<div class="modaloverlay" id="modalOverlay">
+    <div class="modal modalorder" id="modalOrder">
+        <h2 class="modaltitle">Заявка</h2>
+        <form class="modalform" id="orderForm">
+            <div class="modalfield">
+                <input type="text" id="surname" placeholder="Фамилия" required>
+            </div>
+            <div class="modalfield">
+                <input type="text" id="name" placeholder="Имя" required>
+            </div>
+            <div class="modalfield">
+                <input type="text" id="patronymic" placeholder="Отчество">
+            </div>
+            <div class="modalfield">
+                <input type="email" id="email" placeholder="Почта" required>
+            </div>
+            <div class="modalfield">
+                <input type="tel" id="phone" placeholder="Номер телефона" required>
+            </div>
+            <button type="submit" class="modalsubmit">Оформить</button>
+        </form>
+    </div>
+</div>
+<div class="modaloverlay" id="modalSuccess">
+    <div class="modal modalsuccess">
+        <div class="modalgif">
+            <img src="Спасибо.gif" alt="Спасибо">
+        </div>
+    </div>
+</div>
+<div class="notification" id="notification">
+    <p class="notificationtext" id="notificationText">Сообщение</p>
+    <button class="notificationclose" onclick="closeNotification()">×</button>
+</div>
+    <script src="second.js"></script>
+</body>
+</html>

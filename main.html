@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="main.css">
+    <title>Фрегат</title>
+</head>
+<body>
+    <header>
+        <img src="корабль.png" alt="Лого">
+         <div class="links">
+          <ul>
+               <li><a href="#about">О нас</a></li>
+               <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#feedback">Отзывы</a></li>
+                 <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Поиск" class="searchinp">
+            <button class="searchbtn">
+            <img src="Лупа.png" alt="Поиск"></button>
+        </div>
+    </header>
+    <section class="hello">
+        <div class="hellotext">
+        <h1>Фрегат</h1>
+        <h2>Рекламно-производственная <br>компания</h2>
+        <p>Два десятилетия мы доказываем: на небольшой площади можно создать производство <br>
+            полного цикла, оснащённое по последнему слову техники. Ваш заказ — от идеи до <br>
+            воплощения — в надёжных руках нашей команды.
+        </p>
+        </div>
+        <div class="helloimgs">
+            <img class="img1" src="1.png" alt="Блокнот">
+            <img class="img2" src="2.png" alt="Доска почёта">
+            <img class="img3" src="3.png" alt="Планер">
+            <img class="img4" src="4.png" alt=" Кепки">
+            <img class="img5" src="5.png" alt="Кружки">
+            <img class="img6" src="6.png" alt="Кружка и тарелка">
+        </div>
+    </section>
+    <section id="about" class="about">
+        <h2>О нас</h2>
+        <p>ФРЕГАТ - 20 лет в авангарде рекламного производства. Мы прошли путь от частных заказов до 
+            <br>стратегических проектов для администрации Оренбуржья, промышленных гигантов и силовых структур. 
+            <br>Новые технологии позволили нам на небольшой площади сосредоточить производство полного цикла: от 
+            <br>разработки дизайна до брендирования автотранспорта и выпуска агитационных материалов. При этом мы <br>
+            неизменно сохраняем тёплые, доверительные отношения с каждым клиентом — будь то крупный завод 
+            <br>или индивидуальный заказчик.</p>
+            <h2>Нас отметили</h2>
+            <div class="aboutimg">
+                <img src="11.png" alt="Грамота">
+                <img src="12.png" alt="Грамота">
+                <img src="13.png" alt="Грамота">
+                <img src="14.png" alt="Грамота">
+            </div>
+            <div class="slider-indicators" id="aboutIndicators">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+            </div>
+    </section>
+    <section class="privilege">
+        <h2>Наши преимущества</h2>
+        <div class="pri1">
+            <img src="21.png" alt="Коробка">
+            <p>Качественные и проверенные материалы</p>
+        </div>
+        <div class="pri2">
+            <img src="22.png" alt="Часы">
+            <p>Сроки исполнения заказа</p>
+        </div>
+        <div class="pri3">
+            <img src="23.png" alt="Лупа">
+            <p>Внимание к качеству продукции</p>
+        </div>
+    </section>
+    <section id="catalog" class="catalog">
+        <h2>Каталог</h2>
+        <div class="cataloglinks">
+            <div class="cataloglink1">
+                <a href="suv.html">Сувенирная продукция</a>
+                <img src="31.png" alt="Кубок, кружка, тарелка, планер и ручка">
+            </div>
+            <div class="cataloglink2">
+                <a href="rec.html">Стенды, <br>вывески, <br>банеры</a>
+                <img src="32.png" alt="Вывеска и банер">
+            </div>
+            <div class="cataloglink3">
+                <a href="pol.html">Полиграфическая продукция</a>
+                <img src="33.png" alt="Журналы и визитки">
+            </div>
+        </div>
+        <div class="slider-indicators" id="catalogIndicators">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+    </section>
+    <section id="feedback" class="feedback">
+    <h2>Отзывы</h2>
+    <div class="feedbackcontainer">
+        <div class="feedbackcard" data-id="1">
+            <h3 class="feedbackname">Олеся Томина</h3>
+            <p class="feedbacktext">Работают по безналичному расчёту. Всегда на связи. Вежливый персонал. Большой выбор товаров и сувенирной продукции. Делают гравировку на товаре.</p>
+        </div>
+        <div class="feedbackcard" data-id="2">
+            <h3 class="feedbackname">Токарева Наталья</h3>
+            <p class="feedbacktext">Давно работаем с этой фирмой. И хочется сказать слова благодарности! Работать с вами одно удовольствие! Сегодня забираем очередной крупный заказ, как всегда всё чётко, ясно, быстро! За сроки исполнения заказов отдельный респект!!! Огромное спасибо всей вашей команде!</p>
+        </div>
+    </div>
+    <button class="feedbackbtn" onclick="openFeedbackModal()">Написать отзыв</button>
+</section>
+<section id="contact" class="contact">
+    <h2>Контакты</h2>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8e6223a3276705457b226d1fb54a877cb66d062cc157bb975cbbc08a9022cc40&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+    <h4>ИП Назаров Олег Вячеславович</h4>
+    <h4>ИНН 561209199381</h4>
+    <h4>ОГРНИП 306561223400012</h4>
+    <div class="conticon">
+        <img src="41.png" alt="Геометка">
+        <p>Оренбург Монтажников 9/1 оф.5.8.</p>
+    </div>
+    <div class="conticon">
+        <img src="42.png" alt="Часы">
+        <p>Понедельник- четверг с 9-00 до 18-00;<br>
+        Пятница с 9-00 до 17-00.</p>
+    </div>
+    <h4>В это время мы всегда на связи.</h4>
+</section>
+<footer>
+   <div class="footel">
+        <img src="51.png" alt="Телефон1">
+        <p>+73532305207</p>
+    </div>
+    <img src="корабль.png" alt="Лого">
+    <div class="footel">
+        <img src="51.png" alt="Телефон2">
+        <p>+73532305277</p>
+    </div> 
+</footer>
+<div id="feedbackModal" class="modaloverlay">
+    <div class="modalbox">
+        <span class="modalclose" onclick="closeFeedbackModal()">&times;</span>
+        <h2>Отзыв</h2>
+        
+        <form id="feedbackForm">
+            <div class="formgroup">
+                <input type="text" id="feedbackName" placeholder="ФИО" required class="feedbackinp">
+            </div>
+            
+            <div class="formgroup">
+                <textarea id="feedbackText" rows="4" placeholder="Текст отзыва" required class="reviewText"></textarea>
+            </div>
+            
+            <button type="submit" class="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+<div class="notification" id="notification">
+    <p class="notificationtext" id="notificationText">Сообщение</p>
+    <button class="notificationclose" onclick="closeNotification()">×</button>
+</div>
+<button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
+    <script src="main.js"></script>
+</body>
+</html>

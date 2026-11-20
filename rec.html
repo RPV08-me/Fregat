@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="second.css">
+    <title>Фрегат</title>
+</head>
+<body>
+    <header>
+        <img src="корабль.png" alt="Лого">
+         <div class="links">
+          <ul>
+               <li><a href="main.html#about">О нас</a></li>
+               <li><a href="main.html#catalog">Каталог</a></li>
+                <li><a href="main.html#feedback">Отзывы</a></li>
+                 <li><a href="main.html#contact">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Поиск" class="searchinp">
+            <button class="searchbtn">
+            <img src="Лупа.png" alt="Поиск"></button>
+        </div>
+    </header>
+    <section class="about">
+        <h2>Стенды, вывески, банеры</h2>
+        <div class="aboutimg">
+            <img src="71.png" alt="Вывеска">
+            <img src="72.png" alt="Вывеска">
+            <img src="73.png" alt="Вывеска">
+        </div>
+        <div class="aboutimg">
+            <img src="74.png" alt="Вывеска">
+            <img src="75.png" alt="Вывеска">
+            <img src="76.png" alt="Вывеска">
+        </div>
+        <p>Объемная – конструкция с внутренней или внешней подсветкой. Объемные интерьерные вывески привлекают необычными световыми эффектами, работают лучше всего при приглушенном общем освещении или в темноте. Объёмные интерьерные вывески-это стиль и статус предприятия.
+Наружная реклама-популярный вид рекламы во всём мире, это графическая, текстовая или другая рекламная информация, которая размещается на специальных временных или стационарных конструкциях, располагаемых на открытой местности, на фасадах зданий и сооружений, над проезжей частью дорог и улиц. Так же – это еще и рекламные сообщения, которые можно увидеть не только снаружи, но и внутри торговых точек.  Дизайнерских решений при производстве наружной рекламы множество, и с каждым годом их становится всё больше и больше. Это обуславливается появлением новых материалов и технологий, изменением трендов и предпочтений заказчика. Рекламно-производственная компания «ФРЕГАТ» изготавливает наружную рекламу от простой до самой сложной. От простых баннеров и наклеек, до сложных конструкций с подсветкой.
+А также мы являемся официальными представителем ООО «РусДорЗнак»- одного из лидеров на рынке средств по обеспечению безопасности дорожного движения. Предлагаемая продукция соответствует техническому регламенту Таможенного союза ТР ТС 014/2011 «О безопасности автомобильных дорог» и имеет соответствующий сертификат № ЕАЭС RU C-RU.ИШ01.В.00032/19 серия RU №0136566 . Срок действия с 28.05.2019 г. по 28.05.2024 г
+   Мы предлагаем лучшее сочетание цена-качество, оптимальные сроки исполнения заказа (при отсутствии изделий на складе), опыт и внимание наших сотрудников к решению Ваших проблем.</p>
+    </section>
+    <section class="calculator">
+    <div class="calculator1">
+        <h2 class="calctitle">Калькулятор</h2>
+        <div class="calcform">
+            <select class="calcselect" id="calcType">
+                <option value="1000">Вид</option>
+                <option value="1000">Вывеска (1000 руб)</option>
+                <option value="1500">Вывеска интерьерная (1500 руб)</option>
+                <option value="800">Банер (800 руб)</option>
+                <option value="2000">Вывеска уличная (2000 руб)</option>
+            </select>
+            
+            <select class="calcselect" id="calcComplexity">
+                <option value="1">Сложность дизайна</option>
+                <option value="1">Низкая</option>
+                <option value="1.5">Средняя</option>
+                <option value="2">Высокая</option>
+            </select>
+            
+            <div class="calccounter">
+                <button class="calcbtn" onclick="changeComplexity(-1)">−</button>
+                <span class="calcvalue" id="complexityValue">0</span>
+                <button class="calcbtn" onclick="changeComplexity(1)">+</button>
+            </div>
+            
+            <button class="calccalculate" onclick="calculateTotal()">Рассчитать</button>
+            
+            <div class="calctotal">
+                Итого: <span class="calcprice" id="totalPrice">0 руб</span>
+            </div>
+        </div>
+    </div>
+    <button class="calcorder" onclick="orderSubmit()">Оформить</button>
+    </section>
+    <footer>
+   <div class="footel">
+        <img src="51.png" alt="Телефон1">
+        <p>+73532305207</p>
+    </div>
+    <img src="корабль.png" alt="Лого">
+    <div class="footel">
+        <img src="51.png" alt="Телефон2">
+        <p>+73532305277</p>
+    </div> 
+</footer>
+<div class="modaloverlay" id="modalOverlay">
+    <div class="modal modalorder" id="modalOrder">
+        <h2 class="modaltitle">Заявка</h2>
+        <form class="modalform" id="orderForm">
+            <div class="modalfield">
+                <input type="text" id="surname" placeholder="Фамилия" required>
+            </div>
+            <div class="modalfield">
+                <input type="text" id="name" placeholder="Имя" required>
+            </div>
+            <div class="modalfield">
+                <input type="text" id="patronymic" placeholder="Отчество">
+            </div>
+            <div class="modalfield">
+                <input type="email" id="email" placeholder="Почта" required>
+            </div>
+            <div class="modalfield">
+                <input type="tel" id="phone" placeholder="Номер телефона" required>
+            </div>
+            <button type="submit" class="modalsubmit">Оформить</button>
+        </form>
+    </div>
+</div>
+<div class="modaloverlay" id="modalSuccess">
+    <div class="modal modalsuccess">
+        <div class="modalgif">
+            <img src="Спасибо.gif" alt="Спасибо">
+        </div>
+    </div>
+</div>
+<div class="notification" id="notification">
+    <p class="notificationtext" id="notificationText">Сообщение</p>
+    <button class="notificationclose" onclick="closeNotification()">×</button>
+</div>
+    <script src="second.js"></script>
+</body>
+</html>

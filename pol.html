@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="second.css">
+    <title>Фрегат</title>
+</head>
+<body>
+    <header>
+        <img src="корабль.png" alt="Лого">
+         <div class="links">
+          <ul>
+               <li><a href="main.html#about">О нас</a></li>
+               <li><a href="main.html#catalog">Каталог</a></li>
+                <li><a href="main.html#feedback">Отзывы</a></li>
+                 <li><a href="main.html#contact">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Поиск" class="searchinp">
+            <button class="searchbtn">
+            <img src="Лупа.png" alt="Поиск"></button>
+        </div>
+    </header>
+    <section class="about">
+        <h2>Полиграфическая продукция</h2>
+        <div class="aboutimg">
+            <img src="81.png">
+            <img src="82.png">
+            <img src="83.png">
+        </div>
+        <div class="aboutimg">
+            <img src="84.png">
+            <img src="85.png">
+            <img src="86.png">
+        </div>
+        <p>РПК «ФРЕГАТ» выпускает несколько групп полиграфической продукции. Представительская: визитки, папки, блокноты, ежедневники, конверты, поздравительные и пригласительные открытки, поздравительные адреса, дипломы и грамоты, фирменные бланки.
+Книжно-журнальная: книги, учебники, журналы, памятки, инструкции.
+Рекламная: листовки, каталоги, плакаты, афиши, постеры и многое другое.
+Календарная – календари разного вида. Элементы дополнительного оформления представительской полиграфии, делают Календарь более презентабельным. Мы предлагаем фольгирование полное и выборочное, ламинирование и выборочное глянцевание, тиснение и лазерную гравировку.
+Несколько наименований выпускаемой нами продукции: Визитки, буклеты. Удостоверения, ведомственные журналы, книги учёта. Поздравительные и пригласительные открытки и адреса. Дипломы, грамоты. Блокноты, бланки, листовки. Меню баров и ресторанов. Календари всех видов , этикетки и многое другое…</p>
+    </section>
+    <section class="calculator">
+    <div class="calculator1">
+        <h2 class="calctitle">Калькулятор</h2>
+        <div class="calcform">
+            <select class="calcselect" id="calcType">
+                <option value="1000">Вид</option>
+                <option value="1000">Календарь (1000 руб)</option>
+                <option value="1500">Журнал (1500 руб)</option>
+                <option value="800">Визитка (800 руб)</option>
+                <option value="2000">Пропуск (2000 руб)</option>
+            </select>
+            
+            <select class="calcselect" id="calcComplexity">
+                <option value="1">Сложность дизайна</option>
+                <option value="1">Низкая</option>
+                <option value="1.5">Средняя</option>
+                <option value="2">Высокая</option>
+            </select>
+            
+            <div class="calccounter">
+                <button class="calcbtn" onclick="changeComplexity(-1)">−</button>
+                <span class="calcvalue" id="complexityValue">0</span>
+                <button class="calcbtn" onclick="changeComplexity(1)">+</button>
+            </div>
+            
+            <button class="calccalculate" onclick="calculateTotal()">Рассчитать</button>
+            
+            <div class="calctotal">
+                Итого: <span class="calcprice" id="totalPrice">0 руб</span>
+            </div>
+        </div>
+    </div>
+    <button class="calcorder" onclick="orderSubmit()">Оформить</button>
+    </section>
+    <footer>
+   <div class="footel">
+        <img src="51.png" alt="Телефон1">
+        <p>+73532305207</p>
+    </div>
+    <img src="корабль.png" alt="Лого">
+    <div class="footel">
+        <img src="51.png" alt="Телефон2">
+        <p>+73532305277</p>
+    </div> 
+</footer>
+<div class="modaloverlay" id="modalOverlay">
+    <div class="modal modalorder" id="modalOrder">
+        <h2 class="modaltitle">Заявка</h2>
+        <form class="modalform" id="orderForm">
+            <div class="modalfield">
+                <input type="text" id="surname" placeholder="Фамилия" required>
+            </div>
+            <div class="modalfield">
+                <input type="text" id="name" placeholder="Имя" required>
+            </div>
+            <div class="modalfield">
+                <input type="text" id="patronymic" placeholder="Отчество">
+            </div>
+            <div class="modalfield">
+                <input type="email" id="email" placeholder="Почта" required>
+            </div>
+            <div class="modalfield">
+                <input type="tel" id="phone" placeholder="Номер телефона" required>
+            </div>
+            <button type="submit" class="modalsubmit">Оформить</button>
+        </form>
+    </div>
+</div>
+<div class="modaloverlay" id="modalSuccess">
+    <div class="modal modalsuccess">
+        <div class="modalgif">
+            <img src="Спасибо.gif" alt="Спасибо">
+        </div>
+    </div>
+</div>
+<div class="notification" id="notification">
+    <p class="notificationtext" id="notificationText">Сообщение</p>
+    <button class="notificationclose" onclick="closeNotification()">×</button>
+</div>
+    <script src="second.js"></script>
+</body>
+</html>
